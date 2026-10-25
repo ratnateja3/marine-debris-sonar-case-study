@@ -1,0 +1,63 @@
+{
+  "phase": "Phase 5 - CNN classification baseline",
+  "checkpoint": "/content/drive/MyDrive/dl case study/runs/marine_debris/cnn_baseline/best_cnn_model.pth",
+  "best_epoch": 16,
+  "best_validation_loss": 0.05643081978221985,
+  "validation_samples": 317,
+  "validation_accuracy": 0.9842271293375394,
+  "classification_report": {
+    "Fishing Gear or Crab Pot": {
+      "precision": 0.9844559585492227,
+      "recall": 0.9895833333333334,
+      "f1-score": 0.987012987012987,
+      "support": 192.0
+    },
+    "Pipelines or Cylinders": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 74.0
+    },
+    "ShipWrecks": {
+      "precision": 0.96,
+      "recall": 0.9411764705882353,
+      "f1-score": 0.9504950495049505,
+      "support": 51.0
+    },
+    "accuracy": 0.9842271293375394,
+    "macro avg": {
+      "precision": 0.9814853195164076,
+      "recall": 0.9769199346405228,
+      "f1-score": 0.9791693455059791,
+      "support": 317.0
+    },
+    "weighted avg": {
+      "precision": 0.9841499812033146,
+      "recall": 0.9842271293375394,
+      "f1-score": 0.984169530067022,
+      "support": 317.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      190,
+      0,
+      2
+    ],
+    [
+      0,
+      74,
+      0
+    ],
+    [
+      3,
+      0,
+      48
+    ]
+  ],
+  "class_names": [
+    "Fishing Gear or Crab Pot",
+    "Pipelines or Cylinders",
+    "ShipWrecks"
+  ]
+}

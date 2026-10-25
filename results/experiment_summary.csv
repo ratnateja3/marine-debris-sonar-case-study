@@ -1,0 +1,11 @@
+Experiment,Split,Metric,Value
+CNN crop classification,Validation,Accuracy,0.9842271293375394
+CNN crop classification,Validation,Macro F1,0.9791693455059791
+CNN crop classification,Validation,Weighted F1,0.984169530067022
+CNN crop classification,Held-out test,accuracy,0.9803921568627451
+CNN crop classification,Held-out test,macro_f1,0.9728804273387208
+CNN crop classification,Held-out test,weighted_f1,0.9802578749620653
+YOLOv8n object detection,Held-out test,precision,0.7139775141534992
+YOLOv8n object detection,Held-out test,recall,0.7057190523857191
+YOLOv8n object detection,Held-out test,mAP50,0.7347665718542883
+YOLOv8n object detection,Held-out test,mAP50_95,0.4706582315465017

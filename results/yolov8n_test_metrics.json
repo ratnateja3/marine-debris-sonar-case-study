@@ -1,0 +1,27 @@
+{
+  "model": "YOLOv8n",
+  "checkpoint": "/content/drive/MyDrive/dl case study/runs/marine_debris/yolov8n_phase6_fresh/weights/best.pt",
+  "evaluation_split": "test",
+  "test_images": 133,
+  "test_annotated_objects": 153,
+  "empty_label_images": 17,
+  "precision": 0.7139775141534992,
+  "recall": 0.7057190523857191,
+  "mAP50": 0.7347665718542883,
+  "mAP50_95": 0.4706582315465017,
+  "per_class_mAP50": [
+    0.29613530822381934,
+    0.9909340659340659,
+    0.9172303414049798
+  ],
+  "per_class_mAP50_95": [
+    0.10364053037227294,
+    0.7643062322280784,
+    0.5440279320391538
+  ],
+  "class_names": [
+    "Fishing Gear or Crab Pot",
+    "Pipelines or Cylinders",
+    "ShipWrecks"
+  ]
+}

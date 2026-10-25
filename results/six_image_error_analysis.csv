@@ -1,0 +1,7 @@
+Image,GT objects,Predictions,Correct matches,Missed GT,False positives,Mean matched IoU,GT classes,Predicted classes
+BC_POST_T2_02_00_2_7_png_jpg.rf.fa5a0b25187da1db3896cf587445cb05.jpg,0,0,0,0,0,,Background,No detections
+000227_jpg.rf.1f251622eceb4fc5ffabfd7e91411db0.jpg,1,3,1,0,2,0.614,ShipWrecks,"ShipWrecks, ShipWrecks, ShipWrecks"
+LF_1693569444-790_jpg.rf.88cebe44eae0c0d3d447323ac520d23c.jpg,2,2,2,0,0,0.793,"Pipelines or Cylinders, Pipelines or Cylinders","Pipelines or Cylinders, Pipelines or Cylinders"
+HF_1693569563-809_jpg.rf.6624e5da32d8dcf302f95e7353a7f9b0.jpg,1,1,1,0,0,0.805,Pipelines or Cylinders,Pipelines or Cylinders
+HF_1693569529-810_jpg.rf.aa9e74f6d61874a4a59c7fc09946ae9e.jpg,1,1,1,0,0,0.881,Pipelines or Cylinders,Pipelines or Cylinders
+Contact_323_sslo_png_jpg.rf.42167c57e3af7af59e3ad63e7777c3cb.jpg,3,1,1,2,0,0.781,"Fishing Gear or Crab Pot, Fishing Gear or Crab Pot, Fishing Gear or Crab Pot",Fishing Gear or Crab Pot

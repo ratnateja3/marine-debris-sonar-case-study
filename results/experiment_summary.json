@@ -1,0 +1,166 @@
+{
+  "case_study": "AI-Powered Automated Underwater Marine Debris and Anomaly Detection System using Side-Scan Sonar Imagery",
+  "dataset": {
+    "total_images": 1315,
+    "annotated_objects": 1632,
+    "classes": [
+      "Fishing Gear or Crab Pot",
+      "Pipelines or Cylinders",
+      "ShipWrecks"
+    ],
+    "train_images": 924,
+    "validation_images": 258,
+    "test_images": 133,
+    "split_object_counts": {
+      "train": {
+        "Fishing Gear or Crab Pot": 656,
+        "Pipelines or Cylinders": 329,
+        "ShipWrecks": 177
+      },
+      "valid": {
+        "Fishing Gear or Crab Pot": 192,
+        "Pipelines or Cylinders": 74,
+        "ShipWrecks": 51
+      },
+      "test": {
+        "Fishing Gear or Crab Pot": 74,
+        "Pipelines or Cylinders": 54,
+        "ShipWrecks": 25
+      }
+    },
+    "empty_label_images": {
+      "train": 116,
+      "valid": 29,
+      "test": 17
+    }
+  },
+  "cnn_classification_baseline": {
+    "model": "MarineDebrisCNN",
+    "evaluation_split": "validation",
+    "best_epoch": 16,
+    "validation_accuracy": 0.9842271293375394,
+    "macro_f1": 0.9791693455059791,
+    "weighted_f1": 0.984169530067022,
+    "validation_loss": 0.05643081978221985,
+    "validation_samples": 317,
+    "note": "Crop-classification metrics; not directly comparable to YOLO full-image object-detection metrics."
+  },
+  "cnn_test_classification": {
+    "model": "MarineDebrisCNN",
+    "evaluation_split": "test",
+    "test_crops": 153,
+    "accuracy": 0.9803921568627451,
+    "macro_precision": 0.9772222222222222,
+    "macro_recall": 0.9688288288288288,
+    "macro_f1": 0.9728804273387208,
+    "weighted_f1": 0.9802578749620653,
+    "class_names": [
+      "Fishing Gear or Crab Pot",
+      "Pipelines or Cylinders",
+      "ShipWrecks"
+    ],
+    "classification_report": {
+      "Fishing Gear or Crab Pot": {
+        "precision": 0.9733333333333334,
+        "recall": 0.9864864864864865,
+        "f1-score": 0.9798657718120806,
+        "support": 74.0
+      },
+      "Pipelines or Cylinders": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "ShipWrecks": {
+        "precision": 0.9583333333333334,
+        "recall": 0.92,
+        "f1-score": 0.9387755102040817,
+        "support": 25.0
+      },
+      "accuracy": 0.9803921568627451,
+      "macro avg": {
+        "precision": 0.9772222222222222,
+        "recall": 0.9688288288288288,
+        "f1-score": 0.9728804273387208,
+        "support": 153.0
+      },
+      "weighted avg": {
+        "precision": 0.9802941176470589,
+        "recall": 0.9803921568627451,
+        "f1-score": 0.9802578749620653,
+        "support": 153.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        73,
+        0,
+        1
+      ],
+      [
+        0,
+        54,
+        0
+      ],
+      [
+        2,
+        0,
+        23
+      ]
+    ],
+    "checkpoint": "/content/drive/MyDrive/dl case study/runs/marine_debris/cnn_baseline/best_cnn_model.pth",
+    "note": "Crop-classification metrics; not directly comparable to YOLO full-image detection metrics."
+  },
+  "image_level_target_screening": {
+    "task": "image-level known-target presence screening (proxy; not open-set anomaly detection)",
+    "evaluation_split": "test",
+    "confidence_threshold": 0.25,
+    "test_images": 133,
+    "ground_truth_target_present_images": 116,
+    "ground_truth_empty_background_images": 17,
+    "true_positive_images": 89,
+    "true_negative_images": 15,
+    "false_positive_images": 2,
+    "false_negative_images": 27,
+    "image_level_accuracy": 0.7819548872180451,
+    "image_level_precision": 0.978021978021978,
+    "image_level_recall": 0.7672413793103449,
+    "image_level_f1": 0.8599033816425121,
+    "false_alarm_rate_on_empty_images": 0.11764705882352941,
+    "false_alarm_count_on_empty_images": 2,
+    "confusion_matrix_labels": [
+      "background/empty",
+      "target-present"
+    ],
+    "confusion_matrix": [
+      [
+        15,
+        2
+      ],
+      [
+        27,
+        89
+      ]
+    ]
+  },
+  "yolov8n_object_detection": {
+    "evaluation_split": "test",
+    "test_images": 133,
+    "test_annotated_objects": 153,
+    "precision": 0.7139775141534992,
+    "recall": 0.7057190523857191,
+    "mAP50": 0.7347665718542883,
+    "mAP50_95": 0.4706582315465017,
+    "per_class_mAP50": {
+      "Fishing Gear or Crab Pot": 0.29613530822381934,
+      "Pipelines or Cylinders": 0.9909340659340659,
+      "ShipWrecks": 0.9172303414049798
+    },
+    "per_class_mAP50_95": {
+      "Fishing Gear or Crab Pot": 0.10364053037227294,
+      "Pipelines or Cylinders": 0.7643062322280784,
+      "ShipWrecks": 0.5440279320391538
+    }
+  }
+}
